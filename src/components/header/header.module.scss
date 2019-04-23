@@ -1,5 +1,9 @@
 @import '~foundation-sites/assets/foundation.scss';
 
+@import 'fonts/scss/fontawesome.scss';
+@import 'fonts/scss/solid.scss';
+@import 'fonts/scss/brands.scss';
+
 $primary-color: #583520;
 
 // Fade effect mixin
@@ -53,18 +57,37 @@ $bellefair: 'Bellefair', serif;
         // Social Menu
         .socialMenu {
           @include menu-base();
+          @include flex-align(center, middle);
+
+          @include breakpoint(medium) {
+            @include flex-align(right, middle);
+          }
 
           a {
+            @extend %fa-icon;
+            @extend .fab;
+
             &:before {
               display: inline-block;
-              font-family: 'Font Awesome 5 Regular';
-              font-weight: 900;
               font-size: rem-calc(30);
-              color: white;
               -webkit-font-smoothing: antialiased;
+              content: fa-content($fa-var-twitter);
             }
 
-            a[href*='facebook.com']::before {
+            &[href*='facebook.com']::before {
+              content: fa-content($fa-var-facebook);
+            }
+
+            &[href*='twitter.com']::before {
+              content: fa-content($fa-var-twitter);
+            }
+
+            &[href*='instagram.com']::before {
+              content: fa-content($fa-var-instagram);
+            }
+
+            &[href*='youtube.com']::before {
+              content: fa-content($fa-var-youtube);
             }
           }
         }

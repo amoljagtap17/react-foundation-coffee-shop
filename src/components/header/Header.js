@@ -14,10 +14,10 @@ const Header = () => (
           </div>
           <div className={headerStyles.menus}>
             <nav className={headerStyles.socialMenu}>
-              <a href="https://www.facebook.com">Facebook</a>
-              <a href="https://www.twitter.com">Twitter</a>
-              <a href="https://www.instagram.com">Instagram</a>
-              <a href="https://www.youtube.com">Youtube</a>
+              <a href="https://www.facebook.com"><span className="hide">Facebook</span></a>
+              <a href="https://www.twitter.com"><span className="hide">Twitter</span></a>
+              <a href="https://www.instagram.com"><span className="hide">Instagram</span></a>
+              <a href="https://www.youtube.com"><span className="hide">Youtube</span></a>
             </nav>
 
             <div className="title-bar" data-responsive-toggle="main-nav" data-hide-for="medium">
