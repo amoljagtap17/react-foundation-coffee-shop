@@ -4,6 +4,10 @@
 @import 'fonts/scss/solid.scss';
 @import 'fonts/scss/brands.scss';
 
+@import '~motion-ui/src/motion-ui.scss';
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
 $primary-color: #583520;
 
 // Fade effect mixin
@@ -33,6 +37,9 @@ $bellefair: 'Bellefair', serif;
   }
 
   .headerContent {
+    // padding-top: rem-calc(30);
+    @include padding(2);
+
     .topSection {
       @include xy-grid();
       @include flex-align(center, top);
@@ -92,6 +99,10 @@ $bellefair: 'Bellefair', serif;
           }
         }
 
+        .titleBar {
+          background-color: darken($primary-color, 10);
+        }
+
         .mainNavigation {
           @include menu-base();
           @include flex-align(right, middle);
@@ -120,6 +131,13 @@ $bellefair: 'Bellefair', serif;
     }
 
     .bottomSection {
+      @include margin(3);
+      @include breakpoint(medium) {
+        height: rem-calc(130);
+        @include flex();
+        @include flex-align(center, bottom);
+      }
+
       .slogan {
         color: $white;
         position: relative;
@@ -137,4 +155,13 @@ $bellefair: 'Bellefair', serif;
     content: '';
     @include box(100%, 100%);
   }
+}
+
+// Animation Menus
+.menuIn {
+  @include mui-zoom(in, 0.1, 1);
+}
+
+.menuOut {
+  @include mui-zoom(out, 1, 0.1, true, 0.5s, ease);
 }

@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import $ from 'jquery'
 import 'foundation-sites'
+import 'motion-ui/motion-ui'
 
 import Header from 'components/header/Header'
 

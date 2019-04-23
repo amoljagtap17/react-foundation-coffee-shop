@@ -20,12 +20,12 @@ const Header = () => (
               <a href="https://www.youtube.com"><span className="hide">Youtube</span></a>
             </nav>
 
-            <div className="title-bar" data-responsive-toggle="main-nav" data-hide-for="medium">
+            <div className={`title-bar ${headerStyles.titleBar}`} data-responsive-toggle="main-nav" data-hide-for="medium">
               <button className="menu-icon" type="button" data-toggle="main-nav"></button>
               <div className="title-bar-title">Menu</div>
             </div>
 
-            <ul id="main-nav" className={headerStyles.mainNavigation}>
+            <ul id="main-nav" className={headerStyles.mainNavigation} data-toggler data-animate={`${headerStyles.menuIn} ${headerStyles.menuOut}`}>
               <li>
                 <Link to="/">Home</Link>
               </li>
