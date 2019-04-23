@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Bellefair|Montserrat:400,700,900');
+
+$body-font-family: 'Montserrat', sans-serif;
+$anchor-color: white;
+$primary-color: #583520;
+$secondary-color: #c39e5f;
+
+@import '~foundation-sites/assets/foundation.scss';
+
+.container {
+  @include xy-grid-container();
+}
