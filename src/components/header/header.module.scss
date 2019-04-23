@@ -1,5 +1,7 @@
 @import '~foundation-sites/assets/foundation.scss';
 
+$primary-color: #583520;
+
 // Fade effect mixin
 @mixin faded_black() {
   background: linear-gradient(
@@ -48,9 +50,31 @@ $bellefair: 'Bellefair', serif;
           @include xy-cell(auto);
         }
 
+        // Social Menu
+        .socialMenu {
+          @include menu-base();
+
+          a {
+            &:before {
+              display: inline-block;
+              font-family: 'Font Awesome 5 Regular';
+              font-weight: 900;
+              font-size: rem-calc(30);
+              color: white;
+              -webkit-font-smoothing: antialiased;
+            }
+
+            a[href*='facebook.com']::before {
+            }
+          }
+        }
+
         .mainNavigation {
           @include menu-base();
           @include flex-align(right, middle);
+          @include breakpoint(small only) {
+            background-color: $primary-color;
+          }
 
           li {
             @include breakpoint(small only) {

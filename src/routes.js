@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useEffect } from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import $ from 'jquery'
@@ -8,22 +8,21 @@ import Header from 'components/header/Header'
 
 import Home from 'pages/Home'
 
-class Routes extends Component {
+const Routes = () => {
 
-  componentDidMount() {
+  useEffect(() => {
+    console.log('useEffect called!')
     $(document).foundation()
-  }
+  }, [])
 
-  render() {
-    return (
-      <BrowserRouter>
-        <Header />
-        <Switch>
-          <Route exact path="/" component={Home} />
-        </Switch>
-      </BrowserRouter >
-    )
-  }
+  return (
+    <BrowserRouter>
+      <Header />
+      <Switch>
+        <Route exact path="/" component={Home} />
+      </Switch>
+    </BrowserRouter >
+  )
 }
 
 export default Routes
