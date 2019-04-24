@@ -6,6 +6,7 @@ $primary-color: #583520;
 $secondary-color: #c39e5f;
 
 @import '~foundation-sites/assets/foundation.scss';
+@import '~motion-ui/motion-ui.scss';
 
 .container {
   @include xy-grid-container();

@@ -1,0 +1,14 @@
+@import '~motion-ui/src/motion-ui.scss';
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+// Animation Menus
+.menu-in {
+  @include mui-zoom(in, 0.1, 1);
+  // @include mui-fade(in, $duration: 5s);
+}
+
+.menu-out {
+  @include mui-zoom(out, 1, 0.1, true, 0.5s, ease);
+  // @include mui-fade(out, $duration: 5s);
+}

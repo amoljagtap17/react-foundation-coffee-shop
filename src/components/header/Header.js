@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import headerStyles from 'components/header/header.module.scss'
+import 'components/header/header.scss'
 import logoImg from 'assets/img/logo.svg'
 
 const Header = () => (
@@ -25,7 +26,7 @@ const Header = () => (
               <div className="title-bar-title">Menu</div>
             </div>
 
-            <ul id="main-nav" className={headerStyles.mainNavigation} data-toggler data-animate={`${headerStyles.menuIn} ${headerStyles.menuOut}`}>
+            <ul id="main-nav" className={headerStyles.mainNavigation} data-toggler="" data-animate="menu-in menu-out">
               <li>
                 <Link to="/">Home</Link>
               </li>
@@ -52,7 +53,7 @@ const Header = () => (
         </div>
       </div>
     </div>
-  </header>
+  </header >
 )
 
 export default Header

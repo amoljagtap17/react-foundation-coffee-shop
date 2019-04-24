@@ -156,12 +156,3 @@ $bellefair: 'Bellefair', serif;
     @include box(100%, 100%);
   }
 }
-
-// Animation Menus
-.menuIn {
-  @include mui-zoom(in, 0.1, 1);
-}
-
-.menuOut {
-  @include mui-zoom(out, 1, 0.1, true, 0.5s, ease);
-}
